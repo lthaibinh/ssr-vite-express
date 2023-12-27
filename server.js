@@ -3,7 +3,7 @@ import express from "express";
 import { Helmet } from "react-helmet";
 
 // Constants
-const isProduction = process.env.NODE_ENV === "production";
+const isProduction = true //process.env.NODE_ENV === "production";
 const port = process.env.PORT || 5173;
 const base = process.env.BASE || "/";
 
