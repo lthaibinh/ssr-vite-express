@@ -3,7 +3,7 @@ import express from "express";
 import { Helmet } from "react-helmet";
 
 // Constants
-const isProduction = true //process.env.NODE_ENV === "production";
+const isProduction = process.env.NODE_ENV === "production";
 const port = process.env.PORT || 5173;
 const base = process.env.BASE || "/";
 
@@ -14,7 +14,7 @@ const templateHtml = isProduction
 const ssrManifest = isProduction
   ? await fs.readFile("./dist/client/.vite/ssr-manifest.json", "utf-8")
   : undefined;
-
+console.log('binhtest isProduction', isProduction)
 // Create http server
 const app = express();
 
